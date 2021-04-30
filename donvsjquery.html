@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM vs JQuery</title>
+</head>
+
+<body>
+
+    <p>Lorem ipsum dolor.</p>
+    <p>Lorem ipsum dolor 2</p>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <script>
+        // ilk paragrafın <dom nesnesine erişiyoruz
+        var parag = document.querySelector("p");
+        // parag.style.color = "red"; // renk stili değişiyor.
+        // $(parag).css("color", "red");
+
+
+        $("p").first().css("color", "blue");
+        $("p").last().css("color", "red");
+
+        // jquery den DOM elementine erişme
+
+        var p = $("p")[0];
+        p.style.backgroundColor = "green";
+    </script>
+
+</body>
+
+</html>

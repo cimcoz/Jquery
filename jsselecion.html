@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Lorem, ipsum dolor.</p>
+    <p id="onemli">Distinctio, consequuntur qui.</p>
+    <p>Laborum, debitis deserunt!</p>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <script>
+        //tüm paragrafları getir arka planını sarı yap
+        var dizi = document.querySelectorAll("p");
+
+        for (var i = 0; i < dizi.length; i++)
+            dizi[i].style.backgroundColor = "yellow";
+
+
+         //query karşılığı : 
+        // $("p").css("background-color", "green");
+
+        var parag = document.getElementById("onemli");
+        parag.style.fontWeight = "bold";
+
+        // $("#onemli").css("font-weight", "bold");
+    </script>
+</body>
+
+</html>
