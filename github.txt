@@ -6,7 +6,7 @@ remote add origin https://github.com/cimcoz/Jquery.git
 git push -u origin master
 
 # sonraki yaptigimız degisiklikleri gönderirken
-git add
+git add .
 git commit -m "degisikligi anlatan kisa bir ifade"
 git push
 
