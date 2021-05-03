@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery - Traversing</title>
+</head>
+
+<body>
+    <ul id="liste">
+        <li>Alex</li>
+        <li>Mehmet</li>
+        <li>Ali</li>
+        <li>Ahmet</li>
+        <li>Can</li>
+        <li>Sedat</li>
+        <li>Arda</li>
+        <li>Pelin</li>
+        <li>Burçin</li>
+        <li>Hasan</li>
+    </ul>
+
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+
+
+    <script>
+        // her bir  öğenin sonuna o öğenin uzunluğunu koy
+
+        var ogeler = document.querySelectorAll("#liste > li");
+
+        // // for ile
+        // for (var i = 0; i < ogeler.length; i++) {
+
+        //     var metin = ogeler[i].textContent;
+        //     ogeler[i].textContent = metin + ": " + metin.length;
+        //     // ya da
+        //     // ogeler[i].textContent +=": " + metin.length;
+        //     //console.log(metin + ": " + metin.length);
+        // } 
+
+        // **************************
+        // forEach ile
+        // ogeler.forEach(function (element, key) {
+        //     console.log(key + " " + element.innerText);
+        //     var metin = element.innerText;
+        //     element.innerText += ": " + metin.lenght;
+        // });
+
+        $("#liste > li").each(function (index, element) {
+            //console.log(index + " " + element);
+            //console.log(this.innerText);
+            //console.log($(this).text());
+            var metin = $(this).text();
+            $(this).append(" :" + metin.length);
+        });
+
+
+        var dizi = ["Alex", "Arda", "Pelin", "Burçin", "Hasan"];
+
+
+        // saf js ile dizinin elemanlarını bie liste oluşturup içerisine kle
+        // ve sonra bu lsteyi yukarıdaki listenin önüne ekle
+        // let ul = document.createElement("ul");
+        // for (const ad of dizi) {
+        //     let li = document.createElement("li");
+        //     li.innerText = ad;
+        //     ul.appendChild(li);
+        // }
+        // let oncekiUl = document.getElementById("liste");
+        // https://attacomsian.com/blog/javascript-insert-element-before
+        // oncekiUl.parentNode.insertBefore(ul, oncekiUl);
+
+        // jquery ile dizinin elemanlarını bie liste oluşturup içerisine kle
+        // ve sonra bu lsteyi yukarıdaki listenin önüne ekle
+        var yeniUl = $("<ul/>");
+        $.each(dizi, function(index, ad) {
+            console.log(ad);
+            var li = $("<li/>").text(ad).appendTo(yeniUl);
+
+        });
+        yeniUl.insertBefore("#liste");
+
+            // yukarıda önce ul elementi (jquery nesnesi olarak) oluşturduk. 
+            // ad<2ları jquery foreach'i ile gezdik
+            // her ad için o adı içeren bir li oluşturduk ve onu ul<2a ekledik
+            // yeni listeyi eski listenin ÖNCESİNE ekledik.
+
+
+    </script>
+
+
+
+</body>
+
+</html>
