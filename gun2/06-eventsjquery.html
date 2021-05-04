@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+
+    <h2>Tıklanınca Kaybolan Butonlar</h2>
+    <div id="gorev1">
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+        <button>Button 4</button>
+    </div>
+
+    <h2>Tek Tıklanınca Kızaran & Bold Olan Kelimeler</h2>
+    <p id="tesekkur">
+        <span>Gazi</span>
+        <span>DSC</span>
+        <span>topluluğuna</span>
+        <span>teşekkür</span>
+        <span>ederiz.</span>
+    </p>
+    <hr>
+    <h2>Şehirler</h2>
+    <form id="frmSehir">
+        <label for="ad"></label>
+        <input type="text" name="isim" id="ad" required />
+        <button type="submit">Ekle</button>
+    </form>
+
+    <ul id="sehirler"></ul>
+
+    <script src="jquery-3.6.0.min.js"></script>
+
+    <script>
+        $("#gorev1 > button").click(function () {
+            this.remove(); // dom elementine do fonksiyonu uyguladık
+        });
+
+        $("#tesekkur > span").click(function () {
+            $(this).css("color", "blue");
+        });
+
+        $("#frmSehir").submit(function (event) {
+            event.preventDefault();
+            var sehirAd = $("#ad").val();
+            // SORU: alttaki satırda text metodu yerine html kullanırsak ne olur?
+            var li = $("<li/>").text(sehirAd).dblclick(function () {
+                this.remove();
+            });
+            $("ul#sehirler").append(li);
+            this.reset();
+        });
+
+            // CEVAP: şehir adı olarak <strong>Bursa</strong> girin ve farkına bakın
+    </script>
+
+</body>
+
+</html>
