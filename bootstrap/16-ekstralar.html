@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Öğreniyorum</title>
+
+    
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+    
+    <!-- https://fonts.google.com/ -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--
+        https://cdnjs.com/libraries/toastr.js/latest
+        https://codeseven.github.io/toastr/ 
+        https://github.com/CodeSeven/toastr
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+        integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+        crossorigin="anonymous" />
+    <style>
+        body {
+            font-family: 'Oxanium', cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="mt-5">Bootstrap Google Fonts, Font Awesome, Toastr</h1>
+
+        <!-- p*5>lorem -->
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi sint debitis est molestiae tenetur et
+            quasi cum ipsum nisi maiores ad libero repellendus fugit temporibus rerum, magni sit, ex deleniti?</p>
+        <p>Qui vero velit ducimus magnam non hic aperiam, quos culpa repudiandae quas autem dignissimos itaque expedita
+            eligendi, porro animi perspiciatis quisquam eaque ipsa, doloremque sequi nulla consequuntur impedit fugiat?
+            Atque!</p>
+        <p>Est aliquid iste at veritatis accusamus sint possimus nisi sequi asperiores, magni consequatur repellat
+            adipisci. Fugit doloremque dolorum recusandae at quidem laudantium dicta rem architecto aperiam, quas ipsum
+            nulla eius?</p>
+        <p>Eius autem cumque ratione, fugit vel aliquam possimus, asperiores culpa optio laboriosam voluptatum iure
+            voluptates tempore ullam animi voluptate harum, quaerat ipsam. Ipsam quam nostrum sunt quod magni voluptate
+            quia.</p>
+        <p>Dignissimos facilis qui obcaecati, tempore unde illo magni voluptates quas quibusdam vero vitae amet!
+            Excepturi soluta, doloremque repudiandae consectetur maiores magnam qui perferendis! Quisquam magni voluptas
+            sequi beatae fuga id.</p>
+
+        <button class="btn btn-info">
+            <i class="fas fa-virus"></i>
+            Covid-19 Hakkında Bilgi
+        </button>
+        <button class="btn btn-success" id="btnBegen">
+            <i class="fas fa-heart"></i>
+            Beğen
+        </button>
+
+        <button class="btn btn-warning" id="btnBegen2">
+            <i class="fas fa-heart"></i>
+            Beğen
+        </button>
+
+        <button class="btn btn-info" id="btnBegen3">
+            <i class="fas fa-heart"></i>
+            Beğen
+        </button>
+
+
+
+
+    </div>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
+
+<script>
+    // Beğen'e tıklanınca toastr çalışacak
+    $("#btnBegen").click(function(){
+        toastr.success("Başarıyla Beğenildi..");
+    });
+</script>
+
+<script>
+    // Beğen'e tıklanınca toastr çalışacak
+    $("#btnBegen2").click(function(){
+        toastr.warning("Başarıyla Beğenildi..");
+    });
+</script>
+
+<script>
+    // Beğen'e tıklanınca toastr çalışacak
+    $("#btnBegen3").click(function(){
+        toastr.info("Başarıyla Beğenildi..");
+    });
+</script>
+
+
+</body>
+
+</html>
